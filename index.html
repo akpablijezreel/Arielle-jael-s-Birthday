@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday!</title>
+<title>Happy Birthday ARIELLE JAEL!</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -28,8 +28,8 @@ input{width:100%;padding:12px;border:2px solid #ffd0de;border-radius:12px;margin
 <div class="card">
   <div class="badge">🎂 TODAY IS YOUR DAY 🎂</div>
   <h1>Happy Birthday!</h1>
-  <h2 id="nameLine">To My Favorite Person ✨</h2>
-  <img class="photo-circle" src="birthday_photo.jpg">
+  <h2 id="nameLine">To My Favorite Person ✨<br><span style="color:#ff2e7a">ARIELLE JAEL</span></h2>
+  <img class="photo-circle" src="birthday_photo.jpg" alt="Arielle">
   <p class="message">Wishing you laughter, love & all your favorite things.<br><br>Keep shining! 🌟</p>
   <input id="customName" placeholder="Type her name (e.g. Ama)">
   <button class="btn" onclick="celebrate()">Tap for Surprise 🎉</button>
@@ -38,12 +38,12 @@ input{width:100%;padding:12px;border:2px solid #ffd0de;border-radius:12px;margin
 function celebrate(){
   for(let i=0;i<40;i++)createHeart();
   let n=document.getElementById('customName').value;
-  if(n){document.getElementById('nameLine').innerHTML='To '+n+' ✨';document.querySelector('h1').innerHTML='Happy Birthday, '+n+'!'}
+  if(n){document.getElementById('nameLine').innerHTML='To '+n+' ✨<br><span style=color:#ff2e7a>ARIELLE JAEL</span>';document.querySelector('h1').innerHTML='Happy Birthday, '+n+'!'}
   document.querySelector('.btn').innerHTML='YAY! 🎉 Happy Birthday!';
 }
 function createHeart(){
   const h=document.createElement('div');h.className='heart';
-  h.innerHTML=['🎉','💖','🎂','✨','😘'][Math.floor(Math.random()*4)];
+  h.innerHTML=['🎉','💖','🎂','✨'][Math.floor(Math.random()*4)];
   h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*20)+'px';
   h.style.animationDuration=(2+Math.random()*3)+'s';h.style.top='-5vh';
   document.getElementById('hearts').appendChild(h);setTimeout(()=>h.remove(),5000);
@@ -51,4 +51,4 @@ function createHeart(){
 window.onload=()=>{for(let i=0;i<20;i++)setTimeout(createHeart,i*150)}
 </script>
 </body>
-  </html>
+</html>
